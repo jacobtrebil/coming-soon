@@ -5,7 +5,12 @@ import { motion } from 'framer-motion';
 
 function App() {
   return (
+    <div>
+      <header>
+        <p className="logo">Balla</p>
+      </header>
       <motion.div
+      className='comingSoonContainer'
         initial="hidden" 
         whileInView="visible" 
         transition={{ duration: 0.5 }}       
@@ -13,9 +18,9 @@ function App() {
           visible: { opacity: 1, scale: 1 },
           hidden: { opacity: 0, scale: 0 }
       }}>
-        <motion.p whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} className="logo">Balla</motion.p>
         <motion.h1 whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }} className="comingSoon">Coming Soon</motion.h1>
       </motion.div>
+    </div>
   );
 }
 
